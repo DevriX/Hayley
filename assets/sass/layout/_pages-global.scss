@@ -1,0 +1,198 @@
+.entry-content{
+	&:after{
+		content: "[...]";
+	}
+}
+
+.recent{
+	h2{
+		font-size: 18px;
+		margin: 0;
+		font-family: $Noto-Serif;
+		color:#161616;
+		font-weight: bold;
+		line-height: 1.2;
+
+		&.h2-recent{
+			margin-bottom: 20px;
+			font-family: $Noto-Sans;
+			font-size: 18px;
+			color: #161616;
+			font-weight: bold;
+			text-transform: uppercase;
+			line-height: 2;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+	}
+	article{
+		margin-top: 10px;
+		border-bottom: 1px solid #f4f4f4;
+		padding-bottom: 10px;
+	
+		&:last-child{
+			border-bottom: none;
+		}
+		h2{
+			a{
+				text-decoration: none;
+				font-size: 18px;
+				font-family: $Noto-Serif;
+				color: $black;
+				font-weight: bold;
+				line-height: 1.222;
+			}
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				display: inline-block;
+				font-size: 14px;
+				font-family: $Noto-Sans;
+				color: #929292;
+				margin-top: 10px;
+			}
+		}
+	}// article
+}// .recent
+
+.entry-archive {
+	margin: 45px 0;
+	padding: 0;
+
+	&:first-child{
+		margin-top: 0;
+	}
+	figure{
+		width: 150px;
+		height: 140px;
+		float: left;
+		margin: 0 25px 0 0;
+		padding:0;
+		overflow: hidden;
+
+		a {
+			max-width: 100%;
+			vertical-align: middle;
+
+			img{
+				width: 100%;
+				position: relative;
+				margin-top: 9px;
+			}
+		}
+	}
+		&:after{
+			border-bottom: 1px solid #dedede;
+			content: "";
+			display: inline-block;
+			width: 100%;
+			margin-top: 50px;
+		}
+
+	h2{
+		a{
+			font-size: 34px;
+			font-family: $Noto-Serif;
+			color: $black;
+			font-weight: bold;
+			line-height: 1.059;
+			text-decoration: none;
+			display: block;
+
+		}
+		.line-meta-test{
+			display: inline-block;
+			font-weight: normal;
+			font-size: 14px;
+			color: #929292;
+			margin-top:20px;
+
+			}
+	}
+
+	ul{
+		margin: 0;
+		padding: 0;
+		clear: both;
+
+		li{
+			display: inline-block;
+			font-size: 14px;
+			font-family: $Noto-Sans;
+			color: #929292;
+			line-height: 2.571;
+
+		}
+	}
+
+	.entry-content-container {
+		font-size: 17px;
+		font-family: $Noto-Serif;
+		color: #393939;
+		line-height: 1.882;
+		margin-top:30px;
+	}
+	ul{
+		margin-top: 25px;
+		li{
+			margin-right: 30px;
+			display: inline-block;
+
+			a{
+				background-color: $black;
+				text-decoration: none;
+			}
+			&.comments{
+				font-size: 14px;
+				font-family: $Noto-Sans;
+				color: #929292;
+				line-height: 2.6;
+			}
+		}// li
+	}// ul
+}
+
+input[type="text"], input[type="email"], input[type="url"] {
+	box-sizing: border-box!important;
+	padding: 12px;
+	width: 100%;
+	height: 40px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c9c9c9;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
+	font-size: 14px;
+	font-family: $Noto-Sans;
+	line-height: 2.714;
+}
+
+textarea{
+	box-sizing: border-box!important;
+	padding: 12px;
+	width: 100%;
+	height: 150px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c9c9c9;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
+	font-size: 14px;
+	font-family: $Noto-Sans;
+}
+
+input[type="submit"] {
+    background-color: $red;
+	font-size: 14px;
+	font-family: $Noto-Sans;
+	font-weight: bold;
+	padding: 10px;
+	color: $white;
+}

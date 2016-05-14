@@ -1,0 +1,87 @@
+.comments-area {
+	line-height: normal;
+
+	p {
+		line-height: 1.5em;
+	}
+
+	@media (max-width: $breakpoint-small) {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	ol, ul {
+		list-style-type: none;
+		padding: 0;
+		margin-bottom: 70px;
+	}
+
+	.comment-list {
+		.trackback, .pingback, article {
+			border-top: 1px solid #e5e5e5;
+			margin-bottom: 15px;
+			padding-top: 18px;
+
+			@media (max-width: $breakpoint-small) {
+				margin-bottom: 10px;
+				padding-top: 15px;
+			}
+		}
+
+		.reply {
+			padding-left: 50px;
+			margin-top: 0;
+
+			@media (max-width: $breakpoint-small) {
+				padding-left: 38px;
+			}
+
+			a {
+				background: #CACACA;
+				color: #fff;
+				padding: 2px 12px;
+				font-size: 13px;
+				opacity: .8;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		.children {
+			margin-left: 10px;
+		}
+	}
+}
+
+.comment-author {
+	padding-left: 0;
+
+	.avatar {
+		border: 1px solid #e5e5e5;
+		height: 34px;
+		top: 2px;
+		width: 34px;
+	}
+}
+
+.comment-awaiting-moderation,
+.comment-content,
+.comment-metadata {
+	padding-left: 50px;
+
+	@media (max-width: $breakpoint-small) {
+		padding-left: 38px;
+	}
+}
+
+.comment-form {
+	label {
+		display: block;
+	}
+
+	input[type="text"], input[type="email"], input[type="url"] {
+		width: 100%;
+	}
+}

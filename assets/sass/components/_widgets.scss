@@ -1,0 +1,230 @@
+.widget {
+	margin: 25px 0;
+	padding: 0;
+	.screen-reader-text { display: none; }
+	.search-submit { display: none; }
+	h3{
+		margin-top: 25px;
+		font-size: 14px;
+		font-family: $Noto-Sans;
+		color: #050505;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 2.714;
+		letter-spacing: 2px;
+	}
+
+	ul{
+		margin: 0;
+		padding: 0;
+
+		li{
+			display: block;
+			// border-bottom: 1px solid #dedede;
+			margin-bottom: 20px;
+			margin-top: 20px;
+
+			&:last-child{
+				border-bottom: none;
+			}
+			a {
+				// font-size: 14px;
+				font-family: $Noto-Sans;
+				color: #393939;
+				text-decoration: none;
+				font-weight: bold;
+
+				&:before{
+					content: "\f101 ";
+					color: $red;
+					font-family: FontAwesome;
+					margin-right: 10px;
+					font-size: 14px;
+				}
+				&:hover {
+					color: #050505;
+				}
+			}
+			.post-date {
+				font-size: 14px;
+				font-family: $Noto-Sans;
+				color: #A1A1A1;
+				list-style: none;
+				display: block;
+			}
+		}
+	}
+	p {
+		margin: 20px 0;
+		font-family: $Noto-Sans, sans-serif;
+		opacity: 0.8;
+	}
+	
+	&:after{
+		border-bottom: 1px solid #dedede;
+		content: "";
+		display: inline-block;
+		width: 100%;
+		margin-top: 30px;
+	}
+	/* Style for dropdowm menus */
+	select {
+		box-sizing: border-box!important;
+		padding: 12px;
+		vertical-align: middle;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #c9c9c9;
+		border-radius: 2px;
+		background-color: #fff;
+		box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
+		font-size: 14px;
+		font-family: $Noto-Sans;
+		line-height: 2.714;
+	}	
+}
+
+.widget-title {
+	margin-bottom: 20px;
+	font-family: $Noto-Sans;
+	font-size: 18px;
+	color: #161616;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 2;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+/*search*/
+.search-field {
+	box-sizing: border-box!important;
+	padding: 12px;
+	width: 300px;
+	height: 40px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c9c9c9;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
+	font-size: 14px;
+	font-family: $Noto-Sans;
+	color: #aaaaaa;
+	font-style: italic;
+	line-height: 2.714;
+}
+
+
+
+.widget-latest-entrys{
+
+	article{
+		margin-top: 10px;
+		border-bottom: 1px solid #f4f4f4;
+		padding-bottom: 10px;
+
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	h3{
+		margin-top: 25px;
+		font-size: 14px;
+		font-family: $Noto-Sans;
+		color: #050505;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 2.714;
+		letter-spacing: 2px;
+	}
+	h2{
+		margin: 0;
+		padding:0;
+
+		a{
+			font-size: 18px;
+			text-decoration: none;
+			font-family: $Noto-Serif;
+			color: $black;
+			font-weight: bold;
+			line-height: 1.222;
+		}
+	}
+
+	.single-line-meta{
+		margin: 0;
+		padding:0;
+
+		li{
+			display: inline-block;
+			font-size: 14px;
+			font-family: $Noto-Sans;
+			color: #929292;
+			line-height: 2.571;
+		}
+	}
+}//widget-latest-entrys
+
+/* calendar widget */
+.widget_calendar { float: left; }
+#wp-calendar {
+
+	width: 100%; 
+	caption { 
+		text-align: right; 
+		color: #333; 
+		font-size: 12px; 
+		margin-top: 10px; 
+		margin-bottom: 15px; 
+		font-weight: bold;
+	}
+	thead { 
+		font-size: 10px; 
+		th { padding-bottom: 10px; }
+	}
+	tbody { 
+		color: #aaa; 
+		td { 
+			background: #f5f5f5; 
+			border: 1px solid #fff; 
+			text-align: center; 
+			padding:8px;
+			a {
+				font-weight: bold;
+			}
+			&:hover { background: #fff; }
+		}
+		td#today {
+			background: #eee;
+		}
+		.pad { background: none; }
+	}
+	tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+	tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 10px; }
+}
+
+/* RSS */
+.widget_rss {
+	.rsswidget {
+		margin: 20px 0;
+		font-family: $Noto-Sans;
+		color: #393939;
+		// line-height: 2.714;
+		text-decoration: none;	
+	}
+	.rssSummary{
+		margin: 20px 0;
+		font-family: $Noto-Sans, sans-serif;
+		opacity: 0.8;
+	}
+	.rss-date, cite {
+		display: block;
+		font-size: 12px;
+		font-family: $Noto-Sans, sans-serif;
+		opacity: 0.8;
+	}
+	li {
+		border-bottom: 1px solid #dedede;
+	}
+}
