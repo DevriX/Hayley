@@ -17,3 +17,4 @@ wp-content/plugins/hello.php
 /license.txt
 
 node_modules/
+assets/sass/.cache-location/
