@@ -230,6 +230,7 @@ add_action( 'widgets_init', 'hayley_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hayley_scripts() {
+	wp_enqueue_script('jquery');
 	// wp_register_style('theme-style',get_template_directory_uri() . '/style.css','all');
 	wp_enqueue_style( 'haley-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'haley-style', get_template_directory_uri() . '/assets/css/master.css' );

@@ -65,9 +65,25 @@
 	&:first-child{
 		margin-top: 0;
 	}
+	.post-thumbnail {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50%;
+
+		display: inline-block;
+		width: 150px;
+		height: 140px;		
+	}
+
+	@media (max-width: $breakpoint-small) { 
+		figure{
+			max-width: 100% !important;
+			margin-bottom: 20px !important;
+		}
+	}
+	
 	figure{
 		width: 150px;
-		height: 140px;
 		float: left;
 		margin: 0 25px 0 0;
 		padding:0;

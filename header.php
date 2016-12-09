@@ -9,8 +9,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php 
-// Template Name: Home Page
+<?php
 $header_image = "";
 if ( get_header_image() ) {
 	$header_image = get_header_image();
@@ -33,7 +32,7 @@ $description = get_bloginfo( 'description', 'display' );
                     }
 					?>
                 </div>
-				<div class="small-12 large-5 columns">
+				<div class="small-12 large-6 columns">
 					<div class="social-bar top-social">
                         <?php haley_social_media_icons(); ?>
                     </div>

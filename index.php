@@ -7,9 +7,9 @@
 			<article class="entry">
 				<?php  while ( have_posts() ) : the_post(); 
 					if ( has_post_thumbnail() ) { ?>
-						<figure>
+						<a href="<?php the_permalink(); ?>"><figure>
 							<?php the_post_thumbnail(); ?>
-						</figure>
+						</figure></a>
 					<?php } ?>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<div class="single-post-meta">
