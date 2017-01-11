@@ -18,7 +18,7 @@ if ( get_header_image() ) {
 $description = get_bloginfo( 'description', 'display' );
 ?>
 <!-- HEADER -->
-<header id="header" class="site-header" style="background-image: url(<?php echo $header_image; ?>)">
+<header id="header" class="site-header" style="background-image: url(<?php echo esc_attr( $header_image ); ?>)">
 	<div class="top-bar">
 		<div class="row">
 			<div class="top-menu small-12 large-7 columns">
@@ -32,7 +32,7 @@ $description = get_bloginfo( 'description', 'display' );
                     }
 					?>
                 </div>
-				<div class="small-12 large-6 columns">
+				<div class="small-12 large-5 columns">
 					<div class="social-bar top-social">
                         <?php haley_social_media_icons(); ?>
                     </div>
@@ -64,7 +64,7 @@ $description = get_bloginfo( 'description', 'display' );
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="row">
 			<div class="small-12 columns">
-				<div class="nav-title">Navigation Menu</div>
+				<div class="nav-title"><?php _e( 'Navigation Menu', 'hayley' ); ?></div>
 				<!-- .nav-title -->
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-navicon"></i>
 					</button>

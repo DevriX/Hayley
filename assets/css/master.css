@@ -1,8 +1,6 @@
 /**
  * Development build - compresed view. User minified for production.
  */
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic);
-@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700italic,700);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1856,7 +1854,7 @@ hr.clear {
   color: #626262;
   line-height: 3;
   text-decoration: none;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
 }
 .site-header .top-bar .top-menu li a:hover, .site-header .top-bar .top-menu li a:focus {
   color: #000;
@@ -1935,6 +1933,12 @@ hr.clear {
 .site-header .top-bar .social-bar ul {
   padding: 0;
   margin: 5px 0;
+  text-align: right;
+}
+@media (max-width: 641px) {
+  .site-header .top-bar .social-bar ul {
+    text-align: left !important;
+  }
 }
 .site-header .top-bar .social-bar ul li {
   display: inline-block;
@@ -2001,14 +2005,14 @@ hr.clear {
   text-decoration: none;
   display: block;
   font-size: 32px;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #151515;
   font-weight: bold;
   line-height: 0.844;
 }
 .site-header .slogan {
   font-size: 16px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #868686;
   line-height: 1.688;
   margin-top: 10px;
@@ -2221,7 +2225,7 @@ hr.clear {
     padding-left: 20px;
   }
   .site-header nav.main-navigation li ul ul {
-    left: 20px;
+    left: 0px !important;
   }
   .site-header nav.main-navigation li .toggled-on {
     display: inline-block;
@@ -2261,7 +2265,7 @@ footer#footer {
 }
 footer#footer p {
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #FFFFFF;
   font-weight: bold;
   line-height: 36px;
@@ -2276,14 +2280,14 @@ footer#footer p {
 .recent h2 {
   font-size: 18px;
   margin: 0;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #161616;
   font-weight: bold;
   line-height: 1.2;
 }
 .recent h2.h2-recent {
   margin-bottom: 20px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 18px;
   color: #161616;
   font-weight: bold;
@@ -2303,7 +2307,7 @@ footer#footer p {
 .recent article h2 a {
   text-decoration: none;
   font-size: 18px;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #151515;
   font-weight: bold;
   line-height: 1.222;
@@ -2315,7 +2319,7 @@ footer#footer p {
 .recent article ul li {
   display: inline-block;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #929292;
   margin-top: 10px;
 }
@@ -2366,7 +2370,7 @@ footer#footer p {
 }
 .entry-archive h2 a {
   font-size: 34px;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #151515;
   font-weight: bold;
   line-height: 1.059;
@@ -2388,13 +2392,13 @@ footer#footer p {
 .entry-archive ul li {
   display: inline-block;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #929292;
   line-height: 2.571;
 }
 .entry-archive .entry-content-container {
   font-size: 17px;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #393939;
   line-height: 1.882;
   margin-top: 30px;
@@ -2412,7 +2416,7 @@ footer#footer p {
 }
 .entry-archive ul li.comments {
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #929292;
   line-height: 2.6;
 }
@@ -2430,7 +2434,7 @@ input[type="text"], input[type="email"], input[type="url"] {
   background-color: #fff;
   box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   line-height: 2.714;
 }
 
@@ -2447,13 +2451,13 @@ textarea {
   background-color: #fff;
   box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
 }
 
 input[type="submit"] {
   background-color: #ff322e;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-weight: bold;
   padding: 10px;
   color: #FFFFFF;
@@ -2466,7 +2470,7 @@ input[type="submit"] {
 }
 .slider h3 {
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #818181;
   font-weight: bold;
   text-transform: uppercase;
@@ -2475,7 +2479,7 @@ input[type="submit"] {
 .slider a.view-archive {
   float: right;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #939393;
   font-weight: bold;
   line-height: 2.7;
@@ -2528,7 +2532,7 @@ input[type="submit"] {
 .entry .single-line-meta {
   margin-top: 5px;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #929292;
   line-height: 2.571;
 }
@@ -2542,7 +2546,7 @@ input[type="submit"] {
 }
 .entry h2 a {
   font-size: 34px;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #151515;
   font-weight: bold;
   line-height: 1;
@@ -2557,7 +2561,7 @@ input[type="submit"] {
   margin: 45px 0;
   padding: 0;
   font-size: 17px;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #393939;
   line-height: 1.882;
 }
@@ -2573,7 +2577,7 @@ input[type="submit"] {
 }
 .entry .entry-content-container .continue-reading li.comments {
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #929292;
   line-height: 2.6;
 }
@@ -2616,7 +2620,7 @@ input[type="submit"] {
 }
 
 a {
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #909090;
   text-decoration: none;
 }
@@ -2638,7 +2642,7 @@ a:hover {
 .widget h3 {
   margin-top: 25px;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #050505;
   font-weight: bold;
   text-transform: uppercase;
@@ -2658,7 +2662,7 @@ a:hover {
   border-bottom: none;
 }
 .widget ul li a {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #393939;
   text-decoration: none;
   font-weight: bold;
@@ -2675,14 +2679,14 @@ a:hover {
 }
 .widget ul li .post-date {
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #A1A1A1;
   list-style: none;
   display: block;
 }
 .widget p {
   margin: 20px 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif, sans-serif;
   opacity: 0.8;
 }
 .widget:after {
@@ -2703,13 +2707,13 @@ a:hover {
   background-color: #fff;
   box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   line-height: 2.714;
 }
 
 .widget-title {
   margin-bottom: 20px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 18px;
   color: #161616;
   font-weight: bold;
@@ -2733,7 +2737,7 @@ a:hover {
   background-color: #fff;
   box-shadow: inset 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.031);
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #aaaaaa;
   font-style: italic;
   line-height: 2.714;
@@ -2750,7 +2754,7 @@ a:hover {
 .widget-latest-entrys h3 {
   margin-top: 25px;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #050505;
   font-weight: bold;
   text-transform: uppercase;
@@ -2764,7 +2768,7 @@ a:hover {
 .widget-latest-entrys h2 a {
   font-size: 18px;
   text-decoration: none;
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", sans-serif;
   color: #151515;
   font-weight: bold;
   line-height: 1.222;
@@ -2776,7 +2780,7 @@ a:hover {
 .widget-latest-entrys .single-line-meta li {
   display: inline-block;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #929292;
   line-height: 2.571;
 }
@@ -2838,19 +2842,19 @@ a:hover {
 /* RSS */
 .widget_rss .rsswidget {
   margin: 20px 0;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   color: #393939;
   text-decoration: none;
 }
 .widget_rss .rssSummary {
   margin: 20px 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif, sans-serif;
   opacity: 0.8;
 }
 .widget_rss .rss-date, .widget_rss cite {
   display: block;
   font-size: 12px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif, sans-serif;
   opacity: 0.8;
 }
 .widget_rss li {
@@ -2941,7 +2945,7 @@ a:hover {
 button {
   margin-bottom: 40px;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-weight: bold;
   line-height: 2.571;
   padding: 0 15px;
@@ -2965,7 +2969,7 @@ button.button-white-right {
 
 .button {
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-weight: bold;
   line-height: 2.286;
   padding: 10px;

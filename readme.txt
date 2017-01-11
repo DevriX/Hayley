@@ -28,6 +28,9 @@ Hayley includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.2 - Jan 11 2017 =
+* Adjusting the theme, based on the request by WPTRT
+
 = 1.0.1 - Dec 09 2016 =
 * A few small updates, requested by WPTRT
 
@@ -36,8 +39,19 @@ Hayley includes support for Infinite Scroll in Jetpack.
 
 == Credits ==
 
-* Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* Font Awesome - http://fontawesome.io/license/
+* Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Fork of https://github.com/devrix/dx-starter/, (C) 2010-2017 DevriX, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2017 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * headroom.js v0.7.0 - Give your page some headroom. Hide your header until you need it
  - Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/headroom.js
+* Foundation http://foundation.zurb.com/, (C) 1998‐2017 ZURB, Inc, [MIT](http://opensource.org/licenses/MIT)
+* Font Awesome - http://fontawesome.io/license/
+  1. Font License
+  * Applies to all desktop and webfont files in the following directory: font-awesome/fonts/.
+  * License: SIL OFL 1.1
+  * URL: http://scripts.sil.org/OFL
+  
+  2. Code License
+  * Applies to all CSS and LESS files in the following directories: font-awesome/css/, font-awesome/less/, and font-awesome/scss/.
+  * License: MIT License
+  * URL: http://opensource.org/licenses/mit-license.html
