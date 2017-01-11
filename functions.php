@@ -231,7 +231,7 @@ add_action( 'widgets_init', 'hayley_widgets_init' );
  */
 function hayley_scripts() {
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_style( 'haley-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
 	wp_enqueue_style( 'haley-style', get_template_directory_uri() . '/assets/css/master.css' );
 	wp_enqueue_script( 'hayley-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20160514', true );
 	wp_enqueue_script( 'hayley-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160514', true );
