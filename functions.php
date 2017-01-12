@@ -287,7 +287,7 @@ function hayley_category( $post_id = null, $echo = false ) {
 		foreach ( $categories as $key => $category ) {
 			$cat_name = $category->name;
 			$cat_url = get_category_link( $category->term_id );
-			$output .= '<a href="'. esc_attr($cat_url) .'">'. esc_attr($cat_name) . '</a>';
+			$output .= '<a href="'. esc_url( $cat_url ) .'">'. esc_attr ($cat_name ) . '</a>';
 			if ( $key != $last_array_item ) {
 				$output .= $separator;
 			}

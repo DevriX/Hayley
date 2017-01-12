@@ -28,6 +28,9 @@ Hayley includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.3 - Jan 12 2017 =
+* Replace esc_attr() with esc_url() in functions.php and bump the version
+
 = 1.0.2 - Jan 11 2017 =
 * Adjusting the theme, based on the request by WPTRT
 
