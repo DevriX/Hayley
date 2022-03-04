@@ -12,11 +12,13 @@ get_header();?>
 	<!-- POST ARCHIVE -->
 	<section class="large-8 columns">
 		<!-- <div class="large-10 columns"> -->
-		<article class="entry">
+		<article class="entry" id="entry">
 			<?php if ( have_posts() ) : ?>
 	
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'hayley' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php
+					// translators: %s The Query that has been searched
+					printf( esc_html__( 'Search Results for: %s', 'hayley' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 				
 				<?php
