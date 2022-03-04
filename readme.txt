@@ -3,8 +3,8 @@
 Contributors: DevriX
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
 Requires at least: 4.0
-Tested up to: 4.7
-Stable tag: 1.0.4
+Tested up to: 5.7.2
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,38 @@ Hayley theme is based on _s starter theme. It’s a really nice and beautiful tw
 Hayley includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+
+= 1.1.0 - 14 July 2021 =
+* Styling Gutenberg quote 
+* Styling Classic editor quote
+* Minor changes
+
+= 1.0.9 - December 18 2020 =
+* Added Display the post excerpt to 30 symbols
+* Fixed Skip link and underline content links
+
+= 1.0.8 - December 11 2020 =
+* Deleted layout folder
+* Fixed Horizontal scroll on mobile
+* Fixed desktop navigation focus
+
+= 1.0.7 - September 16 2020 =
+* Fixed JavaScript console error
+
+= 1.0.6 - August7 2020 =
+* Header: Site description options
+* Added Tested Up
+* Added Required PHP version
+* Fixed .po file
+* Added wp_open body tag
+* Removed development files
+
+= 1.0.5 - Oct 15 2019 =
+* Updated theme screenshot.
+* Translations comments updated.
+* Fixed series of warnings across the theme.
+* Minor code refactoring (constants, variable prefixes, etc.).
+* Fixed unproper escaping.
 
 = 1.0.4 - Jan 12 2017 =
 * Replace esc_attr() with esc_url() in functions.php and bump the version.

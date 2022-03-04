@@ -35,8 +35,8 @@
 		} );
 } )( jQuery );
 
-( function() {
-	var container, button, menu, links, subMenus;
+( function( $ ) {
+	var container, button, menu, links, subMenus, linksTop;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -93,14 +93,61 @@
 		links[i].addEventListener( 'blur', toggleFocus, true );
 	}
 
+	linksTop = document.getElementById( 'site-navigation-top' ).getElementsByTagName( 'ul' )[0];
+
+	if( linksTop != undefined ) {
+		linksTop = linksTop.getElementsByTagName( 'a' );
+
+		for ( i = 0, len = linksTop.length; i < len; i++ ) {
+			linksTop[i].addEventListener( 'focus', toggleFocus, true );
+			linksTop[i].addEventListener( 'blur', toggleFocus, true );
+		}
+	}
+	
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
 	function toggleFocus() {
+		
 		var self = this;
+		var prevElement = self.parentElement;
+		var toggleButton =  prevElement.getElementsByTagName('button')
+
+		if ($(window).width() <= 640) {			
+			if ( toggleButton.length > 0 ) {
+	
+				$(self).on('keydown', function (e) {
+					var isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+		
+					if (!isTabPressed) {
+						return;
+					};
+					
+					if (!e.shiftKey) {
+						e.preventDefault();
+						$(toggleButton[0]).focus();
+						// $(toggleButton[0]).parent().removeClass('focus');
+					};
+		
+				});
+	
+				$(toggleButton[0].className).on('keydown', function (e) {
+					var isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+		
+					if (!isTabPressed) {
+						return;
+					};
+		
+					if (e.shiftKey && toggleButton.hasClass('toggled-on')) {
+						e.preventDefault();
+						self.focus();
+					};
+				});
+			}
+		}
 
 		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+		while ( -1 === self.className.indexOf( 'nav-menu' ) && -1 === self.className.indexOf( 'top-menu' ) ) {
 
 			// On li elements toggle the class .focus.
 			if ( 'li' === self.tagName.toLowerCase() ) {
@@ -114,4 +161,4 @@
 			self = self.parentElement;
 		}
 	}
-} )();
+} )( jQuery );

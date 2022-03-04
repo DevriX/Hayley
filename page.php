@@ -19,7 +19,7 @@ get_header();?>
 		<!-- POST ARCHIVE -->
 		<section class="large-8 columns">
 			<!-- <div class="large-10 columns"> -->
-			<article class="entry">
+			<article class="entry" id="entry">
 				<?php
 				while ( have_posts() ) : the_post();
 		

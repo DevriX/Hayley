@@ -39,13 +39,15 @@ if ( ! function_exists( 'hayley_header_style' ) ) :
  * @see hayley_custom_header_setup().
  */
 function hayley_header_style() {
-	$header_text_color = get_header_textcolor();
+	$hayley_header_text_color = get_header_textcolor();
+	$hayley_header_text_color_support = add_theme_support( 'custom-header' );
 
 	/*
 	 * If no custom options for text are set, let's bail.
 	 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: HEADER_TEXTCOLOR.
 	 */
-	if ( HEADER_TEXTCOLOR === $header_text_color ) {
+
+	if ( $hayley_header_text_color_support === $hayley_header_text_color ) {
 		return;
 	}
 
@@ -67,7 +69,7 @@ function hayley_header_style() {
 	?>
 		.site-title a,
 		.site-description {
-			color: #<?php echo esc_attr( $header_text_color ); ?>;
+			color: #<?php echo esc_attr( $hayley_header_text_color ); ?>;
 		}
 	<?php endif; ?>
 	</style>

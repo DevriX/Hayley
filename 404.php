@@ -15,7 +15,7 @@ get_header(); ?>
 		<section class="error-404 not-found">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h2 class="widget-title"><?php esc_html_e( 'Return to the home page', 'hayley' ); ?></h2>
 
-			<img src="<?php echo get_template_directory_uri() . '/assets/images/404.png'; ?>"></a>
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/404.png', 'hayley' ); ?>"></a>
 			<header class="page-header">
 				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'hayley' ); ?></h1>
 			</header><!-- .page-header -->
@@ -51,8 +51,8 @@ get_header(); ?>
 					endif;
 
 					/* translators: %1$s: smiley */
-					$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'hayley' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+					$hayley_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'hayley' ), convert_smilies( ':)' ) ) . '</p>';
+					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$hayley_archive_content" );
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
 				?>

@@ -16,9 +16,13 @@
 	<footer id="footer">
 		<div class="row">
 			<p class="columns entry">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hayley' ) ); ?>" target="_blank" ><?php printf( esc_html__( 'Proudly powered by %s', 'hayley' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hayley' ) ); ?>" target="_blank" ><?php 
+				// translators: %s - WordPress
+				printf( esc_html__( 'Proudly powered by %s', 'hayley' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'hayley' ), 'hayley', '<a href="http://devrix.com" rel="designer" target="_blank" >DevriX</a>' ); ?>
+				<?php 
+				// translators: Used in the footer - indicates who the developer is
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'hayley' ), 'hayley', '<a href="' . esc_url( __( 'http://devrix.com', 'hayley' ) ) . '" rel="designer" target="_blank" >DevriX</a>' ); ?>
 			</p>
 		</div>
 	</footer>

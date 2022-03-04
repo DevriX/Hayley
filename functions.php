@@ -137,7 +137,7 @@ add_action( 'customize_register', 'hayley_add_social_sites_customizer' );
  
 function hayley_add_social_sites_customizer($wp_customize) {
  
-	$wp_customize->add_section( 'haley_social_settings', array(
+	$wp_customize->add_section( 'hayley_social_settings', array(
 		'title'    => __('Social Media Icons', 'hayley'),
 		'priority' => 35,
 	) );
@@ -155,7 +155,7 @@ function hayley_add_social_sites_customizer($wp_customize) {
 		
 			$wp_customize->add_control( $social_site, array(
 				'label'    => $social_site . " url:",
-				'section'  => 'haley_social_settings',
+				'section'  => 'hayley_social_settings',
 				'type'     => 'text',
 				'priority' => $priority,
 			) );
@@ -165,7 +165,7 @@ function hayley_add_social_sites_customizer($wp_customize) {
 	}
 }
 
-function haley_social_media_icons() {
+function hayley_social_media_icons() {
  
     $social_sites = hayley_customizer_social_media_array();
     
@@ -183,10 +183,12 @@ function haley_social_media_icons() {
 	        $class = 'fa fa-' . $active_site;
 			?>
             <li>
-                <a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site) ); ?>">
+                <a class="<?php echo esc_attr( $active_site ); ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site) ); ?>">
                     <span class="fa-stack fa-lg">
                     	<i class="fa fa-circle fa-stack-2x"></i>
-                    	<i class="<?php echo esc_attr( $class ); ?> fa-stack-1x fa-inverse" title="<?php printf( __('%s icon', 'hayley'), $active_site ); ?>"></i>
+                    	<i class="<?php echo esc_attr( $class ); ?> fa-stack-1x fa-inverse" title="<?php
+                    	// translators: Social media icon
+                    	printf(esc_html__('%s icon', 'hayley'), esc_html( $active_site ) ); ?>"></i>
                 	</span>
                 </a>
             </li>
@@ -197,11 +199,11 @@ function haley_social_media_icons() {
 }
 
 
-function haley_customizer_live_preview() {
-	wp_enqueue_script("haley-themecustomizer", get_template_directory_uri() . "/js/theme-customizer.js", array("jquery", "customize-preview"), '',  true);
+function hayley_customizer_live_preview() {
+	wp_enqueue_script("hayley-themecustomizer", get_template_directory_uri() . "/js/theme-customizer.js", array("jquery", "customize-preview"), '',  true);
 }
 
-add_action("customize_preview_init", "haley_customizer_live_preview");
+add_action("customize_preview_init", "hayley_customizer_live_preview");
 
 /**
  * Register widget area.
@@ -232,7 +234,7 @@ add_action( 'widgets_init', 'hayley_widgets_init' );
 function hayley_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
-	wp_enqueue_style( 'haley-style', get_template_directory_uri() . '/assets/css/master.css' );
+	wp_enqueue_style( 'hayley-style', get_template_directory_uri() . '/assets/css/master.css' );
 	wp_enqueue_script( 'hayley-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20160514', true );
 	wp_enqueue_script( 'hayley-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160514', true );
 
@@ -252,21 +254,21 @@ function google_fonts() {
             
 add_action('wp_enqueue_scripts', 'google_fonts');
 
-function hayley_sinlge_meta( $post_id = null ) {
+function hayley_single_meta( $post_id = null ) {
 	if ( empty( $post_id ) ) {
 		return;
 	}
 	
 	echo '<div class="single-line-meta">';
-		_e( 'Posted on: ', 'hayley' );
-		echo get_the_date() . __( ' by ', 'hayley' );
+		esc_html_e( 'Posted on: ', 'hayley' );
+		echo get_the_date() . esc_html__( ' by ', 'hayley' );
 		the_author();
 		echo '<div class="category">';
-			echo hayley_category( $post_id, true );
+			echo esc_html( hayley_category( $post_id, true ) , 'hayley' );
 		echo '</div>';
 		
 		echo '<div class="category">';
-			echo hayley_tags( $post_id, true );
+			echo esc_html( hayley_tags( $post_id, true ), 'hayley' );
 		echo '</div>';
 	echo '</div>';
 }
@@ -295,7 +297,7 @@ function hayley_category( $post_id = null, $echo = false ) {
 	}
 	
 	if ( $echo === true ) {
-		echo $output;
+		echo  $output;
 	} else {
 		return $output;
 	}
@@ -330,3 +332,16 @@ function hayley_tags( $post_id = null, $echo = false ) {
 		return $output;
 	}
 }
+
+
+/**
+ * Set the Excerpt to 30 symbols
+ */
+
+function hayley_excerpt_length( $length ) {
+	if ( is_admin() ) {
+            return $length;
+       }
+    return 30;
+}
+add_filter( 'excerpt_length', 'hayley_excerpt_length');
